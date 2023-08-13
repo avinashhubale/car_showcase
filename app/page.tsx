@@ -4,7 +4,7 @@ import { fetchCars } from "@/utils";
 import { Container } from "postcss";
 import { fuels, manufacturers, yearsOfProduction } from "@/constants";
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: { searchParams: any }) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
